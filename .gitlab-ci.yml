@@ -44,7 +44,8 @@ build-maya:
     - echo $PATH
     - go env
     - which go
-    -  apt-get install \
+    - apt-get update 
+    - apt-get install \
     - apt-transport-https \
     - ca-certificates \
     - curl \
