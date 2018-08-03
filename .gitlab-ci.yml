@@ -18,10 +18,10 @@ stages:
 
 
 build-maya:
+   variables: 
+      GOARCH: 'amd64'
+      GO_FOR_RELEASE: '1.9.1'
    stage: build
-    variables: 
-    - GOARCH=amd64
-    - GO_FOR_RELEASE=1.9.1
    before_script:
     - apt-get update
     - apt-get install sudo
@@ -46,7 +46,7 @@ build-maya:
    script: 
     - make build
 
-/#build-maya:
+#build-maya:
 #  stage: build
 #  script:
 #    - cd $CURRENT_BUILD_PATH
