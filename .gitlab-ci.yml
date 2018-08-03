@@ -45,9 +45,9 @@ build-maya:
     - go env
     - which go
     - apt-get update 
-    - apt-get install \
+    - apt-get install 
     - apt-transport-https \
-    - ca-certificates \
+    - ca-certificates
     - curl \
     - software-properties-common
     - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
