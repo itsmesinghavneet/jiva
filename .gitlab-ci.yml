@@ -24,6 +24,7 @@ build-maya:
 
 baseline-image:
   stage: baseline
+  image: atulabhi/kops:v8
   script:
     - "curl -X POST -F token=a70ff62f6fb0f8013c687087ae5565 -F ref=test https://gitlab.com/api/v4/projects/7642571/trigger/pipeline"
 #build-maya:
