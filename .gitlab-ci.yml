@@ -14,7 +14,7 @@
 stages:
  # - install-environment
   - build
-  - test
+  - baseline
 
 
 build-maya:
@@ -51,8 +51,12 @@ build-maya:
     - apt-get install -y docker-ce
     - usermod -aG docker ${USER}
    script: 
-    - make build
+    - echo "success"
 
+baseline-image:
+  stage: baseline
+  script:
+    - "curl -X POST -F token=a70ff62f6fb0f8013c687087ae5565 -F ref=test https://gitlab.com/api/v4/projects/7642571/trigger/pipeline"
 #build-maya:
 #  stage: build
 #  script:
@@ -64,3 +68,4 @@ build-maya:
 #  script:
 #    - cd $CURRENT_BUILD_PATH
 #    - go test
+
