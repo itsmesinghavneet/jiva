@@ -20,7 +20,7 @@ stages:
 build-jiva:
    stage: build
    script: 
-    - echo "success"
+    - echo "building-jiva"
 
 #baseline-image:
 #  stage: baseline
