@@ -17,16 +17,25 @@ stages:
   - baseline
 
 
-build-maya:
+build-jiva:
    stage: build
    script: 
     - echo "success"
 
-baseline-image:
-  stage: baseline
-  image: atulabhi/kops:v8
-  script:
-    - "curl -X POST -F token=a70ff62f6fb0f8013c687087ae5565 -F ref=test https://gitlab.com/api/v4/projects/7642571/trigger/pipeline"
+#baseline-image:
+#  stage: baseline
+#  image: atulabhi/kops:v8
+#  script:
+#    - pwd
+#    - git clone https://github.com/itsmesinghavneet/baseline.git
+#    - cd baseline
+#    - wget https://raw.githubusercontent.com/harshvkarn/test-1/baseline/platforms/commit-writer/write-commit.yml
+#    - ansible-playbook write-commit.yml --extra-vars "branch=$CI_PROJECT_NAME commit=$CI_COMMIT_SHA"
+#    - "curl -X POST -F token=a70ff62f6fb0f8013c687087ae5565 -F ref=test https://gitlab.com/api/v4/projects/7642571/trigger/pipeline"
+
+
+
+
 #build-maya:
 #  stage: build
 #  script:
