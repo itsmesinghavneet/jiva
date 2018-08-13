@@ -19,8 +19,14 @@ stages:
 
 build-jiva:
    stage: build
+   image: harshvkarn/dind:v6
+   before_script:
+     - sudo apt-get install -y
+     - sudo apt-get install -y curl open-iscsi
+     - mkdir -p $HOME/gopath/bin
    script: 
     - echo "building-jiva"
+    - make build
 
 #baseline-image:
 #  stage: baseline
