@@ -38,8 +38,10 @@ baseline-image:
     - cd baseline
     - wget https://raw.githubusercontent.com/harshvkarn/test-1/baseline/platforms/commit-writer/write-commit.yml
     - ansible-playbook write-commit.yml --extra-vars "branch=$CI_PROJECT_NAME commit=ci"
-    #- git push https://itsmesinghavneet:git@123@baseline.git --all
-    #- "curl -X POST -F token=a70ff62f6fb0f8013c687087ae5565 -F ref=test https://gitlab.com/api/v4/projects/7642571/trigger/pipeline"
+    - git add .
+    - git commit -m "updated baseline jiva"
+    - git push 'https://itsmesinghavneet:gitlab123@github.com/itsmesinghavneet/baseline.git'
+    - "curl -X POST -F token=a70ff62f6fb0f8013c687087ae5565 -F ref=test https://gitlab.com/api/v4/projects/7642571/trigger/pipeline"
 
 
 
