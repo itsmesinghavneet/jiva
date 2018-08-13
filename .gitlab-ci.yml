@@ -30,7 +30,7 @@ build-jiva:
 #    - make build
 
 baseline-image:
-  stage: baseline
+  stage: baseline-jiva
   image: atulabhi/kops:v8
   script:
     - pwd
