@@ -8,7 +8,7 @@
 # NOTE - These will be executed when any make target is invoked.
 #
 
-IS_GO_INSTALLED           := $(shell which go >> /dev/null 2>&1; echo $$?)
+IS_GO_INSTALLED           := $(shell which go; echo $$?)
 IS_DOCKER_INSTALLED       := $(shell which docker >> /dev/null 2>&1; echo $$?)
 
 TARGETS := $(shell ls scripts)

@@ -1,4 +1,4 @@
-language: go
+#language: go
 dist: trusty
 sudo: required
 install: true
