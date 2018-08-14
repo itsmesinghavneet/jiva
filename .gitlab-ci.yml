@@ -28,7 +28,7 @@ build-jiva:
    script: 
     - echo "Building-jiva"
     - echo $COMMIT
-#    - make build
+    - make build
 
 baseline-image:
   stage: baseline
@@ -38,11 +38,11 @@ baseline-image:
     - git clone https://github.com/itsmesinghavneet/baseline.git
     - cd baseline
     - wget https://raw.githubusercontent.com/harshvkarn/test-1/baseline/platforms/commit-writer/write-commit.yml
-    - ansible-playbook write-commit.yml --extra-vars "branch=$CI_PROJECT_NAME commit=ci"
-    - git add .
-    - git commit -m "updated baseline jiva"
-    - git push 'https://itsmesinghavneet:gitlab123@github.com/itsmesinghavneet/baseline.git'
-    - "curl -X POST -F token=a70ff62f6fb0f8013c687087ae5565 -F ref=test https://gitlab.com/api/v4/projects/7642571/trigger/pipeline"
+  #  - ansible-playbook write-commit.yml --extra-vars "branch=$CI_PROJECT_NAME commit=ci"
+  #  - git add .
+  #  - git commit -m "updated baseline jiva"
+  #  - git push 'https://itsmesinghavneet:gitlab123@github.com/itsmesinghavneet/baseline.git'
+  #  - "curl -X POST -F token=a70ff62f6fb0f8013c687087ae5565 -F ref=test https://gitlab.com/api/v4/projects/7642571/trigger/pipeline"
 
 
 
