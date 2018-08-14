@@ -22,11 +22,12 @@ build-jiva:
    image: harshvkarn/dind:v6
    before_script:
      - export COMMIT=${CI_COMMIT_SHA:0:8}
-     - sudo apt-get install -y
-     - sudo apt-get install -y curl open-iscsi
+     #- sudo apt-get install -y
+     #- sudo apt-get install -y curl open-iscsi
      - mkdir -p $HOME/gopath/bin
    script: 
     - echo "Building-jiva"
+    - echo $COMMIT
 #    - make build
 
 baseline-image:
